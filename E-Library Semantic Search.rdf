@@ -1,0 +1,1377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#"
+     xml:base="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#DOI -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#DOI"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#fullName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#fullName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#issue -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#issue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#journalName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#journalName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#label"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#volume -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#volume"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#authorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#authorOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#coAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#coAuthorOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasFormat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publishedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publisherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publisherOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#specializedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#specializedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#subTopicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#subTopicOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#topicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#topicOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ISBN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ISBN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#language">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#pageCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#pageCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publicationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publicationYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ACM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ACM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#AI_For_Humanity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#AI_For_Humanity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Artificial_Intelligence"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Oxford_University_Press"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fei_Fe_Li"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780198855144</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">275</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-15T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#American_Literature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#American_Literature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Artificial_Intelligence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Artificial_Intelligence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Computer_Science"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Charles_Scribners_Sons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Charles_Scribners_Sons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Classic_Literature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Classic_Literature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Coming_of_Age -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Coming_of_Age">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Computer_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Computer_Science">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Data_Management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Data_Management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Dystopia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Dystopia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Dystopian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Dystopian"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#EPUB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#EPUB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#F_Scott_Fitzgerald -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#F_Scott_Fitzgerald">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fei_Fe_Li -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fei_Fe_Li">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Allen_and_Unwin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Allen_and_Unwin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Orwell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Orwell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#HarperOne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#HarperOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Harper_Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Harper_Lee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#InfoWorld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#InfoWorld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_B_Lippincott_Company -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_B_Lippincott_Company">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_D_Salinger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_D_Salinger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_R_R_Tolkien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_R_R_Tolkien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jane_Austen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jane_Austen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jane_Doe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jane_Doe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jens_Lehmann -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jens_Lehmann">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#John_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#John_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Kahlil_Gibran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Kahlil_Gibran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graph -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graph">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Artificial_Intelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graphs_101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graphs_101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graph"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Springer"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jens_Lehmann"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9783319997801</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-10T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graphs_SOTA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graphs_SOTA">
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Knowledge_Graph"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ACM"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paul_Groth"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412345678901</ISBN>
+        <language>English</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-15T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Linked_Data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Linked_Data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Linked_Data_Designs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Linked_Data_Designs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#EPUB"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Linked_Data"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#OReilly_Media"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tom_Heath"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781449307520</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-01T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Little_Brown_and_Company -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Little_Brown_and_Company">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#MIT_Press -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#MIT_Press">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Natalya_Noy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Natalya_Noy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#OReilly_Media -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#OReilly_Media">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ontology_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ontology_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Artificial_Intelligence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ontology_Engineering_Survey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ontology_Engineering_Survey">
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ontology_Engineering"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Springer"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Natalya_Noy"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">957483920154</ISBN>
+        <language>Spanish</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-01T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Oxford_University_Press -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Oxford_University_Press">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paul_Groth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paul_Groth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paulo_Coelho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paulo_Coelho">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Philosophical_Fiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Philosophical_Fiction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Philosophy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Philosophy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Pride_and_Prejudice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Pride_and_Prejudice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Romance"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#T_Egerton"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Jane_Austen"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780141439518</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">279</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1813-01-28T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ralph_Waldo_Emerson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Ralph_Waldo_Emerson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Secker_Warburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Secker_Warburg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Computer_Science"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web_Article -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web_Article">
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fantasy"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#MIT_Press"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tim_Berners-Lee"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209384756189</ISBN>
+        <language>Spanish</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1813-03-28T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web_Primer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web_Primer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#PDF"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Semantic_Web"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#MIT_Press"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tim_Berners-Lee"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12345678891</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T04:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Spirituality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Spirituality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Springer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Springer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#T_Egerton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#T_Egerton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#TechPress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#TechPress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Alchemist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Alchemist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Philosophical_Fiction"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#HarperOne"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paulo_Coelho"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780061122415</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">197</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-04-15T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Catcher_in_the_Rye -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Catcher_in_the_Rye">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Coming_of_Age"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Little_Brown_and_Company"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_D_Salinger"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780316769488</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1951-07-16T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Great_Gatsby -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Great_Gatsby">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Classic_Literature"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Charles_Scribners_Sons"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#F_Scott_Fitzgerald"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780743273565</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1925-04-10T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Hobbit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Hobbit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fantasy"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Allen_and_Unwin"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_R_R_Tolkien"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780547928227</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1937-09-21T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Prophet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#The_Prophet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Spirituality"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Kahlil_Gibran"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Kahlil_Gibran"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780394404288</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1923-09-01T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tim_Berners-Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tim_Berners-Lee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#To_Kill_a_Mockingbird -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#To_Kill_a_Mockingbird">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Paperback"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Fiction"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#J_B_Lippincott_Company"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Harper_Lee"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780061120084</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">281</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1960-07-11T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tom_Heath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Tom_Heath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <name>author1</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Author"/>
+        <name>author2</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ePub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#ePub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Format"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#testBook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#testBook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author1"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#author2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#1984 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#1984">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+        <hasFormat rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Hardcover"/>
+        <hasTopic rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Dystopian"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Secker_Warburg"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#George_Orwell"/>
+        <ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780451524935</ISBN>
+        <language>english</language>
+        <pageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">328</pageCount>
+        <publicationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-06-08T00:00:00</publicationYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#st">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>If a book has a subtopic, it belongs to the parent topic.</rdfs:comment>
+        <rdfs:label>Topic Hierarchies</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#st"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#subTopicOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#st"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Topic of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#topicOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Author&apos;s specialization</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#hasTopic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#specializedIn"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Publisher Of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publishedBy"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#publisherOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Author of</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#authorOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>CoAuthorship</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#Book"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#writtenBy"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#b"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#name"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n1"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#n2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#coAuthorOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/moataz/ontologies/2025/4/E-Library#a2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
