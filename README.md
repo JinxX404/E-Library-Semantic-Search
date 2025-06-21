@@ -79,7 +79,6 @@ See the presentation for class hierarchy and relationship diagrams.
 ## Repository Contents
 - **E-Library Semantic Search.rdf**: The ontology file (RDF/XML)
 - **E-Library documentation.docx**: Project documentation
-- **E-Library presentation.pptx**: Project presentation
 
 ## Getting Started
 
